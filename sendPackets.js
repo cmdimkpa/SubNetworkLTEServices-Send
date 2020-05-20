@@ -3,11 +3,15 @@
 const express = require('express');
 const axios = require('axios');
 
+const app = express();
+app.use(bodyParser({ limit: '50mb' }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+const PORT = process.env.PORT || 3200
+
 let burstSize = 10;
 let burstInterval = 10000;
 let events = 0;
-
-const PORT = process.env.PORT || 3200
 
 const sendPackets = async () => {
     events++;
