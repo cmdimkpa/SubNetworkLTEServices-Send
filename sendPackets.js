@@ -4,9 +4,6 @@ const express = require('express');
 const axios = require('axios');
 
 const app = express();
-app.use(bodyParser({ limit: '50mb' }));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 const PORT = process.env.PORT || 3200
 
 let burstSize = 10;
