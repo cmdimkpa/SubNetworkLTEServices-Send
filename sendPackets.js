@@ -12,8 +12,8 @@ let events = 0;
 
 const sendPackets = async () => {
     events++;
-    await axios.get(`https://sub-network-lte.herokuapp.com/SubNetworkLTE/AirInterface/UERegistration/${burstSize}`).then(data => {
-      console.log(`${data} (${events})`)
+    await axios.get(`https://sub-network-lte.herokuapp.com/SubNetworkLTE/AirInterface/UERegistration/${burstSize}`).then(response => {
+      console.log(`${response.data} (${events})`)
     }).catch(err => {
       console.log(err)
     })
