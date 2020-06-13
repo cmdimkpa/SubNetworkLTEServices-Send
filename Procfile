@@ -1,1 +1,1 @@
-web: worker sendPackets.js
+worker: node sendPackets.js
