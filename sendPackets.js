@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3200
 
 let burstSize = 10;
-let burstInterval = 10000;
+let burstInterval = 2500;
 let events = 0;
 
 const sendPackets = async () => {
